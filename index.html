@@ -240,7 +240,12 @@
 <li><code>hexo d</code></li>
 </ol>
 <p>###2、报fatal: could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument错误<br>一般出现这个错误就是因为git没有真正的配置好，具体的git配置可以上网搜索，检查配置正确的重要方法就是把add、commit、push整个流程都走一遍，直到在github上能看到提交的代码，就说明git配置好了</p>
-<p>###3、hexo fatal: Not a git repository (or any of the parent directories)<br>出现这个错误就是无法</p>
+<p>###3、hexo fatal: Not a git repository (or any of the parent directories)<br>出现这个错误就是无法正常的提交库，可以检查提交的库地址是否有错，如果没错可以再安装一下支持git类型的插件<br><code>npm install hexo-deployer-git --save</code><br>然后<br><code>hexo g</code><br><code>hexo d</code>试一下，如果还是不行，我建议可以删除目录后按照教程再走一遍</p>
+<p>###4、当在windows上面的cmd上面提交出现错误时<br>我当时给deploy选项设置时是用的<strong>https</strong>形式的仓库，所以在提交代码上理所当然的会要求输入用户名和密码才能提交，但是大家都知道的，cmd面板上面是无法调出输入用户名和密码的小框框的，所以换到git cmd上面就可以了，后来我把仓库地址换成git开头和结尾的就没有问题了</p>
+<p>##四、一点总结</p>
+<p>###1、其实hexo博客的就是一个git仓库的正常管理<br>我对hexo真正的运行原理不是很懂，但就我使用的感觉来说，hexo就是一个托管在github上面的仓库，文章以markdown的形式存储在github仓库中，所以hexo 的deploy就是一个git push的过程，但是因为hexo的特殊处理，能够将内容区分后进行push</p>
+<p>###2、出了问题不用怕，上goole，究细节，看错误提示<br>在安装的过程中遇到很多的问题，一个个的上网搜答案，很多问题都出在一些不经意之间的细节中，要学会像侦探一样，探寻每个不同寻常的背后隐藏的故事</p>
+<p>ok，先写到这儿吧，以后有什么，再跟进。</p>
 
       
     </div>
