@@ -113,7 +113,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/bug/" style="font-size: 10px;">bug</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/laravel/" style="font-size: 10px;">laravel</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
+						<a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a>
 					</div>
 				</section>
 				
@@ -198,71 +198,6 @@
 </nav>
 
       <div class="body-wrap">
-  
-    <article id="post-关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for &#39;created_at&#39;错的解决方案" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/" class="article-date">
-  	<time datetime="2016-07-25T06:52:53.000Z" itemprop="datePublished">2016-07-25</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/"> hexo new &#39;关于在laravel中进行数据库migrate时报错的解决方案‘</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>今天在学习laravel时，在进行<code>php artisan migrate</code>操作时报了一个错误<code>[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &#39;created_at&#39;</code></p>
-<p>百思不得其解，上网搜索，在github上找到了解决方案</p>
-<p>解决方案就是找到config/database.php 文件，把<code>mysql</code>的配置项<code>strict</code>修改为<code>true</code>就可以了。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
-
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
   
     <article id="post-博客搭建历程" class="article article-type-post" itemscope itemprop="blogPost">
   
