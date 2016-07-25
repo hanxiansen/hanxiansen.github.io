@@ -4,14 +4,30 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Archives: 2016/7 | 寒山实验室</title>
+  <title> hexo new &#39;关于在laravel中进行数据库migrate时报错的解决方案‘ | 寒山实验室</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="寒山实验室">
-<meta property="og:url" content="https://hanxiansen.github.io/archives/2016/07/index.html">
+  <meta name="description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
+SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
+ue for &amp;#39;created_at&amp;#39;
+百思不得其解，上网搜索，在github上找到了解决方案
+解决方案就是找到">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" hexo new '关于在laravel中进行数据库migrate时报错的解决方案‘">
+<meta property="og:url" content="https://hanxiansen.github.io/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/index.html">
 <meta property="og:site_name" content="寒山实验室">
+<meta property="og:description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
+SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
+ue for &amp;#39;created_at&amp;#39;
+百思不得其解，上网搜索，在github上找到了解决方案
+解决方案就是找到">
+<meta property="og:updated_time" content="2016-07-25T07:11:48.159Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="寒山实验室">
+<meta name="twitter:title" content=" hexo new '关于在laravel中进行数据库migrate时报错的解决方案‘">
+<meta name="twitter:description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
+SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
+ue for &amp;#39;created_at&amp;#39;
+百思不得其解，上网搜索，在github上找到了解决方案
+解决方案就是找到">
   
     <link rel="alternative" href="/atom.xml" title="寒山实验室" type="application/atom+xml">
   
@@ -197,119 +213,98 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for &#39;created_at&#39;错的解决方案" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/" class="archive-article-date">
-  	<time datetime="2016-07-25T06:52:53.000Z" itemprop="datePublished">Jul 25</time>
+    <div class="article-meta">
+      <a href="/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/" class="article-date">
+  	<time datetime="2016-07-25T06:52:53.000Z" itemprop="datePublished">2016-07-25</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for 'created_at'错的解决方案/"> hexo new &#39;关于在laravel中进行数据库migrate时报错的解决方案‘</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+       hexo new &#39;关于在laravel中进行数据库migrate时报错的解决方案‘
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/blog/">blog</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>今天在学习laravel时，在进行<code>php artisan migrate</code>操作时报了一个错误<code>[PDOException]
+SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
+ue for &#39;created_at&#39;</code></p>
+<p>百思不得其解，上网搜索，在github上找到了解决方案</p>
+<p>解决方案就是找到config/database.php 文件，把<code>mysql</code>的配置项<code>strict</code>修改为<code>true</code>就可以了。</p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/21/博客搭建历程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">博客搭建历程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/21/博客搭建历程/" class="archive-article-date">
-  	<time datetime="2016-07-21T05:08:56.000Z" itemprop="datePublished">Jul 21</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/21/博客搭建历程/">博客搭建历程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/20/hello-world/" class="archive-article-date">
-  	<time datetime="2016-07-20T07:34:54.284Z" itemprop="datePublished">Jul 20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/20/hello-world/">Hello World</a>
-    </h1>
-  
 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for &#39;created_at&#39;错的解决方案" data-title=" hexo new &#39;关于在laravel中进行数据库migrate时报错的解决方案‘" data-url="https://hanxiansen.github.io/2016/07/25/关于在laravel中进行数据库migrate时报SQLSTATE[42000] Syntax error or access violation 1067 Invalid default val ue for &#39;created_at&#39;错的解决方案/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hanxiansen"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -335,8 +330,8 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false
