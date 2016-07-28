@@ -4,14 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: php | 寒山实验室</title>
+  <title>&#39;关于laravel中双冒号class用法的学习&#39; | 寒山实验室</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="寒山实验室">
-<meta property="og:url" content="https://hanxiansen.github.io/tags/php/index.html">
+  <meta name="description" content="在学习laravel模型工厂部分知识的时候遇到这种写法1App\User::class
+觉得很奇怪的，起初还以为是laravel定义的一个方法，但是一看这名字，马上又否定了自己的愚蠢想法，这class是php的保留字，不可能是laravel自定义的类属性，上网搜了一下，找到了答案https://laracasts.com/discuss/channels/laravel/laravel-51-wh">
+<meta property="og:type" content="article">
+<meta property="og:title" content="'关于laravel中双冒号class用法的学习'">
+<meta property="og:url" content="https://hanxiansen.github.io/2016/07/28/关于laravel中双冒号class用法的学习/index.html">
 <meta property="og:site_name" content="寒山实验室">
+<meta property="og:description" content="在学习laravel模型工厂部分知识的时候遇到这种写法1App\User::class
+觉得很奇怪的，起初还以为是laravel定义的一个方法，但是一看这名字，马上又否定了自己的愚蠢想法，这class是php的保留字，不可能是laravel自定义的类属性，上网搜了一下，找到了答案https://laracasts.com/discuss/channels/laravel/laravel-51-wh">
+<meta property="og:updated_time" content="2016-07-28T09:17:33.491Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="寒山实验室">
+<meta name="twitter:title" content="'关于laravel中双冒号class用法的学习'">
+<meta name="twitter:description" content="在学习laravel模型工厂部分知识的时候遇到这种写法1App\User::class
+觉得很奇怪的，起初还以为是laravel定义的一个方法，但是一看这名字，马上又否定了自己的愚蠢想法，这class是php的保留字，不可能是laravel自定义的类属性，上网搜了一下，找到了答案https://laracasts.com/discuss/channels/laravel/laravel-51-wh">
   
     <link rel="alternative" href="/atom.xml" title="寒山实验室" type="application/atom+xml">
   
@@ -197,127 +204,97 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-关于laravel中双冒号class用法的学习" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/28/关于laravel中双冒号class用法的学习/" class="archive-article-date">
-  	<time datetime="2016-07-28T09:14:52.000Z" itemprop="datePublished">Jul 28</time>
+    <div class="article-meta">
+      <a href="/2016/07/28/关于laravel中双冒号class用法的学习/" class="article-date">
+  	<time datetime="2016-07-28T09:14:52.000Z" itemprop="datePublished">2016-07-28</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/28/关于laravel中双冒号class用法的学习/">&#39;关于laravel中双冒号class用法的学习&#39;</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      &#39;关于laravel中双冒号class用法的学习&#39;
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/class/">class</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
 	</div>
 
-          
+        
 	<div class="article-category tagcloud">
 	<a class="article-category-link" href="/categories/blog/">blog</a>
 	</div>
 
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在学习laravel模型工厂部分知识的时候遇到这种写法<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">App\User::class</div></pre></td></tr></table></figure></p>
+<p>觉得很奇怪的，起初还以为是laravel定义的一个方法，但是一看这名字，马上又否定了自己的愚蠢想法，这class是php的保留字，不可能是laravel自定义的类属性，上网搜了一下，找到了答案<a href="https://laracasts.com/discuss/channels/laravel/laravel-51-what-is-class?page=1" target="_blank" rel="external">https://laracasts.com/discuss/channels/laravel/laravel-51-what-is-class?page=1</a></p>
+<p>原来这个<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">```php</div><div class="line"></div><div class="line">&lt;?PHP namespace test\test01;</div><div class="line"></div><div class="line">class Test &#123;</div><div class="line"></div><div class="line">    function __construct()</div><div class="line">    &#123;</div><div class="line">        echo self::class;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">&#125;</div><div class="line"></div><div class="line">new Test();</div></pre></td></tr></table></figure></p>
+<p>这里的结果就是<code>test\test01\Test</code></p>
+
+      
+    </div>
+    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/07/26/关于laravel中的表单方法欺骗/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于laravel中的表单方法欺骗</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/26/关于laravel中的表单方法欺骗/" class="archive-article-date">
-  	<time datetime="2016-07-26T02:24:24.000Z" itemprop="datePublished">Jul 26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/26/关于laravel中的表单方法欺骗/">关于laravel中的表单方法欺骗</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/路由/">路由</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/" class="archive-article-date">
-  	<time datetime="2016-07-25T07:40:32.000Z" itemprop="datePublished">Jul 25</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/">关于在laravel中进行数据migrate操作时报错的解决方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/bug/">bug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/laravel/">laravel</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
-	</div>
-
-          
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/blog/">blog</a>
-	</div>
 
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
 
-    
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="关于laravel中双冒号class用法的学习" data-title="&#39;关于laravel中双冒号class用法的学习&#39;" data-url="https://hanxiansen.github.io/2016/07/28/关于laravel中双冒号class用法的学习/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"hanxiansen"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -343,9 +320,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
