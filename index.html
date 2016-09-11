@@ -255,6 +255,259 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/11/关于编码中异或概念的理解/" itemprop="url">
+                  关于编码中异或概念的理解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-11T11:11:18+08:00" content="2016-09-11">
+              2016-09-11
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/11/关于编码中异或概念的理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/关于编码中异或概念的理解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：</p>
+<ol>
+<li><p>异或门是用来解决二进制剩余系的，01101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道两者的结果；</p>
+</li>
+<li><p>可以理解为：“不是这个就是那个”。即满足两个条件之一，不能两个都选，也不能一个不选。</p>
+</li>
+</ol>
+<p>比如：“我明天要么去北京，要么去上海” 这个命题就可以理解为 “我明天去北京” 异或 “我明天去上海” 。这样，我明天肯定在北京或上海两地之一，不可能在第三个地方，也不可能明天同时出现在北京和上海。<br>这是通俗易懂的理解。</p>
+<ol>
+<li>XOR 等价于 ！= <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>把 XOR 替换为 ！=<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure></p>
+<p>依然成立</p>
+<p>说白了XOR等于在问：“两个布尔值是否不同？”</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/03/快速排序算法学习/" itemprop="url">
+                  快速排序算法学习
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-03T10:37:39+08:00" content="2016-09-03">
+              2016-09-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/03/快速排序算法学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/03/快速排序算法学习/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/01/冒泡排序算法学习/" itemprop="url">
                   冒泡排序算法学习
                 </a>
@@ -334,8 +587,14 @@
 <ol>
 <li>冒泡的方向</li>
 <li>冒泡的次数</li>
-<li>冒泡空气推力</li>
+<li>冒泡的空气推力</li>
 </ol>
+<p>如果想理解php代码中关于冒泡排序的具体过程，可以把复杂程序拆分简单化，复杂的问题往往是由各种简单小问题累计起来的，只要适当的拆分，逐一击破，就能大胜也！</p>
+<ol>
+<li>首先我们找一组数据中要冒的那个气泡（也就是找到该组数据中的最大或最小值）<br>我们看这段数组<code>$a = array(10,50,20,33,69,99,100,12,2,11)</code>，如果让你用站在常规思路去比较大小，我们可以一眼扫描完，在大脑中快速运算对比完后把<strong>2</strong>给揪出来，但是遇到数据少的情况下还好，如果数据多起来，有几万个数据的时候就不好办了，因为你的大脑可能一下子记不住那么多数据，数据一多可能会把你搞糊涂，不记得哪些对比过，哪些还没对比过，这时候你想了个个比较笨的万无一失的方法，你把第一个数给揪出来，先假设它就是整个数据中最小的值10（只是假设），为了尽量少的看后面那一大串的数据，你只和紧挨着它的后一位置的数据进行对比（通过对比，你发现10比50小，运气不错），然后你再把10和接下来的那个值20对比，和33对比….</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$a = <span class="keyword">array</span>(<span class="number">10</span>,<span class="number">50</span>,<span class="number">20</span>,<span class="number">33</span>,<span class="number">69</span>,<span class="number">99</span>,<span class="number">100</span>,<span class="number">12</span>,<span class="number">2</span>,<span class="number">11</span>);</div><div class="line"></div><div class="line"><span class="comment">// 这里我们找数组中最小的那个气泡</span></div><div class="line"><span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; count($a); $i++) &#123;</div><div class="line">	<span class="comment">// 假设数组中最小的那个值就在第一个（索引值为0），我们往从0索引开始逐个向后比较大小</span></div><div class="line">	$low = $a[<span class="number">0</span>];</div><div class="line">	<span class="keyword">if</span>($low &gt; $a[$i]) &#123;</div><div class="line">		$low = $a[$i];		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种比较最小值的方法（算是最通用的找最小值的方法），但是如果考虑一些特殊情况，如果你再比较这么多数据的时候，突然分神了，你忘记比较到哪个数据了（擦，刚才比较的是140，还是141来着），这时候你不得不崩溃的从头开始比较（当然在计算机中，一般不会发生这种不靠谱的事情，但也有可能发生意外），于是你想了一个更笨的办法，你和它后面的那个数据比较，如果比它小，就交换下，比它大就不交换，当然这么笨的举动如果让计算机去做，可能也就没什么了吧。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>($k=<span class="number">0</span>; $k&lt;count($a); $k++) &#123;</div><div class="line">    <span class="comment">// 指引冒泡的方向</span></div><div class="line">    <span class="keyword">if</span> ($a[$k] &lt; $a[$k+<span class="number">1</span>]) &#123;</div><div class="line">        <span class="comment">// 负责前后数据交换（推动冒泡前行）</span></div><div class="line">        $tmp = $a[$k];</div><div class="line">        $a[$k] = $a[$k+<span class="number">1</span>];</div><div class="line">        $a[$k+<span class="number">1</span>] = $tmp;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 <p>冒泡排序的具体演示：</p>
 <p><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273713677.gif" alt=""></p>
 <p>可以看到那些个特殊的数据就像个可爱的小气泡自觉的冒到了它该去的顶层位置。</p>
@@ -1266,7 +1525,7 @@ ue for &#39;created_at&#39;</code></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">8</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1283,7 +1542,7 @@ ue for &#39;created_at&#39;</code></p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

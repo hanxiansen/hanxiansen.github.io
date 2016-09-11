@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="php,laravel,bug," />
+  <meta name="keywords" content="算法,编码,逻辑,逻辑门,悟学," />
 
 
 
@@ -84,33 +84,28 @@
 
 
 
-<meta name="description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &amp;#39;created_at&amp;#39;
+<meta name="description" content="在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：
 
-百思不得其解，上网搜索，在github上找到了解决方案
-解决方案就是找">
+异或门是用来解决二进制剩余系的，01101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道两者的结果；
+
+可以理解为：“不是这个就是那个”。即">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于在laravel中进行数据migrate操作时报错的解决方案">
-<meta property="og:url" content="https://hanxiansen.github.io/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/index.html">
+<meta property="og:title" content="关于编码中异或概念的理解">
+<meta property="og:url" content="https://hanxiansen.github.io/2016/09/11/关于编码中异或概念的理解/index.html">
 <meta property="og:site_name" content="寒山实验室">
-<meta property="og:description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &amp;#39;created_at&amp;#39;
+<meta property="og:description" content="在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：
 
-百思不得其解，上网搜索，在github上找到了解决方案
-解决方案就是找">
-<meta property="og:image" content="http://btznt.img48.wal8.com/img48/351201_20130616232947/146943049456.png">
-<meta property="og:updated_time" content="2016-07-25T08:16:35.854Z">
+异或门是用来解决二进制剩余系的，01101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道两者的结果；
+
+可以理解为：“不是这个就是那个”。即">
+<meta property="og:updated_time" content="2016-09-11T04:52:53.477Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于在laravel中进行数据migrate操作时报错的解决方案">
-<meta name="twitter:description" content="今天在学习laravel时，在进行php artisan migrate操作时报了一个错误[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &amp;#39;created_at&amp;#39;
+<meta name="twitter:title" content="关于编码中异或概念的理解">
+<meta name="twitter:description" content="在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：
 
-百思不得其解，上网搜索，在github上找到了解决方案
-解决方案就是找">
-<meta name="twitter:image" content="http://btznt.img48.wal8.com/img48/351201_20130616232947/146943049456.png">
+异或门是用来解决二进制剩余系的，01101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道两者的结果；
+
+可以理解为：“不是这个就是那个”。即">
 
 
 
@@ -131,9 +126,9 @@ ue for &amp;#39;created_at&amp;#39;
 
 
 
-  <link rel="canonical" href="https://hanxiansen.github.io/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/"/>
+  <link rel="canonical" href="https://hanxiansen.github.io/2016/09/11/关于编码中异或概念的理解/"/>
 
-  <title> 关于在laravel中进行数据migrate操作时报错的解决方案 | 寒山实验室 </title>
+  <title> 关于编码中异或概念的理解 | 寒山实验室 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +268,7 @@ ue for &amp;#39;created_at&amp;#39;
             
             
               
-                关于在laravel中进行数据migrate操作时报错的解决方案
+                关于编码中异或概念的理解
               
             
           </h1>
@@ -285,8 +280,8 @@ ue for &amp;#39;created_at&amp;#39;
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-25T15:40:32+08:00" content="2016-07-25">
-              2016-07-25
+            <time itemprop="dateCreated" datetime="2016-09-11T11:11:18+08:00" content="2016-09-11">
+              2016-09-11
             </time>
           </span>
 
@@ -315,8 +310,8 @@ ue for &amp;#39;created_at&amp;#39;
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/" itemprop="commentsCount"></span>
+                <a href="/2016/09/11/关于编码中异或概念的理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/11/关于编码中异或概念的理解/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,12 +334,21 @@ ue for &amp;#39;created_at&amp;#39;
       
 
       
-        <p>今天在学习laravel时，在进行<code>php artisan migrate</code>操作时报了一个错误<code>[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &#39;created_at&#39;</code></p>
-<p><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/146943049456.png" alt=""></p>
-<p>百思不得其解，上网搜索，在github上找到了解决方案</p>
-<p>解决方案就是找到config/database.php 文件，把<code>mysql</code>的配置项<code>strict</code>修改为<code>true</code>就可以了。</p>
+        <p>在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：</p>
+<ol>
+<li><p>异或门是用来解决二进制剩余系的，01101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道两者的结果；</p>
+</li>
+<li><p>可以理解为：“不是这个就是那个”。即满足两个条件之一，不能两个都选，也不能一个不选。</p>
+</li>
+</ol>
+<p>比如：“我明天要么去北京，要么去上海” 这个命题就可以理解为 “我明天去北京” 异或 “我明天去上海” 。这样，我明天肯定在北京或上海两地之一，不可能在第三个地方，也不可能明天同时出现在北京和上海。<br>这是通俗易懂的理解。</p>
+<ol>
+<li>XOR 等价于 ！= <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>把 XOR 替换为 ！=<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure></p>
+<p>依然成立</p>
+<p>说白了XOR等于在问：“两个布尔值是否不同？”</p>
 
       
     </div>
@@ -367,11 +371,15 @@ ue for &#39;created_at&#39;</code></p>
       
         <div class="post-tags">
           
-            <a href="/tags/php/" rel="tag">#php</a>
+            <a href="/tags/算法/" rel="tag">#算法</a>
           
-            <a href="/tags/laravel/" rel="tag">#laravel</a>
+            <a href="/tags/编码/" rel="tag">#编码</a>
           
-            <a href="/tags/bug/" rel="tag">#bug</a>
+            <a href="/tags/逻辑/" rel="tag">#逻辑</a>
+          
+            <a href="/tags/逻辑门/" rel="tag">#逻辑门</a>
+          
+            <a href="/tags/悟学/" rel="tag">#悟学</a>
           
         </div>
       
@@ -380,17 +388,13 @@ ue for &#39;created_at&#39;</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/07/21/博客搭建历程/" rel="next" title="博客搭建历程">
-                <i class="fa fa-chevron-left"></i> 博客搭建历程
+              <a href="/2016/09/03/快速排序算法学习/" rel="next" title="快速排序算法学习">
+                <i class="fa fa-chevron-left"></i> 快速排序算法学习
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/07/26/关于laravel中的表单方法欺骗/" rel="prev" title="关于laravel中的表单方法欺骗">
-                关于laravel中的表单方法欺骗 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -416,8 +420,8 @@ ue for &#39;created_at&#39;</code></p>
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/"
-           data-title="关于在laravel中进行数据migrate操作时报错的解决方案" data-url="https://hanxiansen.github.io/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/">
+      <div class="ds-thread" data-thread-key="2016/09/11/关于编码中异或概念的理解/"
+           data-title="关于编码中异或概念的理解" data-url="https://hanxiansen.github.io/2016/09/11/关于编码中异或概念的理解/">
       </div>
     
   </div>
