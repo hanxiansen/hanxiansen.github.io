@@ -325,18 +325,12 @@
       
         
           
-            <p>在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：</p>
-<ol>
-<li><p>异或门是用来解决二进制剩余系的，1101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道异或门在两个布尔中扮演的角色和布尔值异或后的结果；</p>
-</li>
-<li><p>可以理解为：“不是这个就是那个”。即满足两个条件之一，不能两个都选，也不能一个不选。</p>
-</li>
-</ol>
+            <p>异或，英文为<strong>exclusive OR</strong>，或缩写成<strong>xor</strong></p>
+<p>在《编码》这本书中，用各种电路图展示过逻辑中的各种门，比如与门，或门，这其中“异或门”一开始没怎么弄懂，网上搜了下资料，找到这些解释辅助理解：</p>
+<h2 id="二进制加法中的剩余系"><a href="#二进制加法中的剩余系" class="headerlink" title="二进制加法中的剩余系"></a>二进制加法中的剩余系</h2><p>异或门是用来解决二进制剩余系的，1101+01011，这其中0+1 =1, 1+1=0;0+0=0; 其中最重要的就是1+1等于0，因为1+1要进1位，所以会余下0，理解了二进制中这个后可以很容易知道异或门在两个布尔中扮演的角色和布尔值异或后的结果；</p>
+<h2 id="不是这个就是那个"><a href="#不是这个就是那个" class="headerlink" title="不是这个就是那个"></a>不是这个就是那个</h2><p>可以理解为：“不是这个就是那个”。即满足两个条件之一，不能两个都选，也不能一个不选。</p>
 <p>比如：“我明天要么去北京，要么去上海” 这个命题就可以理解为 “我明天去北京” 异或 “我明天去上海” 。这样，我明天肯定在北京或上海两地之一，不可能在第三个地方，也不可能明天同时出现在北京和上海。<br>这是通俗易懂的理解。</p>
-<ol>
-<li>XOR 等价于 ！= <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure>
-</li>
-</ol>
+<h2 id="等价于！"><a href="#等价于！" class="headerlink" title="等价于！="></a>等价于！=</h2><p>XOR 等价于 <strong><em>！= </em></strong><br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> <span class="keyword">XOR</span> <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure></p>
 <p>把 XOR 替换为 ！=<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">False</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">False</span>;</div><div class="line"><span class="keyword">False</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">False</span> -&gt; <span class="keyword">True</span>;</div><div class="line"><span class="keyword">True</span> ！= <span class="keyword">True</span> -&gt; <span class="keyword">False</span>;</div></pre></td></tr></table></figure></p>
 <p>依然成立</p>
 <p>说白了XOR等于在问：“两个布尔值是否不同？”</p>
