@@ -1,0 +1,716 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="悟学,算法,冒泡排序," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="寒山实验室" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="谈到冒泡排序，先理解冒泡是一种什么感觉：
+
+如图所示，冒泡的专业释义是指：水里的土壤存在气体，而后冒出，在水里产生无水空间直至与大气接触消融。其过程称为冒泡我们可以看到冒泡是因为水中的空气和水区分，比水轻所以冒了出来，通俗点来说，冒泡就是因为在一群相同的物件中，因为某个东西比较特殊所以鹤立鸡群，率先冒出头角，爬到了社会顶层。
+冒泡排序的核心思想就是把一组数据中最小或最大的那个数据冒出来，给这个特殊">
+<meta property="og:type" content="article">
+<meta property="og:title" content="冒泡排序算法学习">
+<meta property="og:url" content="https://hanxiansen.github.io/2016/09/01/冒泡排序算法学习/index.html">
+<meta property="og:site_name" content="寒山实验室">
+<meta property="og:description" content="谈到冒泡排序，先理解冒泡是一种什么感觉：
+
+如图所示，冒泡的专业释义是指：水里的土壤存在气体，而后冒出，在水里产生无水空间直至与大气接触消融。其过程称为冒泡我们可以看到冒泡是因为水中的空气和水区分，比水轻所以冒了出来，通俗点来说，冒泡就是因为在一群相同的物件中，因为某个东西比较特殊所以鹤立鸡群，率先冒出头角，爬到了社会顶层。
+冒泡排序的核心思想就是把一组数据中最小或最大的那个数据冒出来，给这个特殊">
+<meta property="og:image" content="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273590885.gif">
+<meta property="og:image" content="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273713677.gif">
+<meta property="og:updated_time" content="2016-09-11T04:35:00.901Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="冒泡排序算法学习">
+<meta name="twitter:description" content="谈到冒泡排序，先理解冒泡是一种什么感觉：
+
+如图所示，冒泡的专业释义是指：水里的土壤存在气体，而后冒出，在水里产生无水空间直至与大气接触消融。其过程称为冒泡我们可以看到冒泡是因为水中的空气和水区分，比水轻所以冒了出来，通俗点来说，冒泡就是因为在一群相同的物件中，因为某个东西比较特殊所以鹤立鸡群，率先冒出头角，爬到了社会顶层。
+冒泡排序的核心思想就是把一组数据中最小或最大的那个数据冒出来，给这个特殊">
+<meta name="twitter:image" content="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273590885.gif">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '寒山'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://hanxiansen.github.io/2016/09/01/冒泡排序算法学习/"/>
+
+  <title> 冒泡排序算法学习 | 寒山实验室 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">寒山实验室</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                冒泡排序算法学习
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-01T21:07:20+08:00" content="2016-09-01">
+              2016-09-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/01/冒泡排序算法学习/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/01/冒泡排序算法学习/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>谈到冒泡排序，先理解冒泡是一种什么感觉：</p>
+<p><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273590885.gif" alt=""></p>
+<p>如图所示，冒泡的专业释义是指：<strong>水里的土壤存在气体，而后冒出，在水里产生无水空间直至与大气接触消融。其过程称为冒泡</strong><br>我们可以看到冒泡是因为水中的空气和水区分，比水轻所以冒了出来，通俗点来说，冒泡就是因为在一群相同的物件中，因为某个东西比较特殊所以鹤立鸡群，率先冒出头角，爬到了社会顶层。</p>
+<p>冒泡排序的核心思想就是把一组数据中最小或最大的那个数据冒出来，给这个特殊数据充满气，让它像一个小气泡一样漂浮到水面上。</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">$a = <span class="keyword">array</span>(<span class="number">100</span>,<span class="number">50</span>,<span class="number">20</span>,<span class="number">33</span>,<span class="number">69</span>,<span class="number">99</span>,<span class="number">10</span>,<span class="number">12</span>,<span class="number">22</span>,<span class="number">11</span>);</div><div class="line"><span class="comment">// 冒泡的次数</span></div><div class="line"><span class="keyword">for</span> ($j=<span class="number">1</span>; $j&lt;count($a); $j++) &#123;</div><div class="line">    <span class="comment">// 每冒泡$j次，就减少$j个泡泡,因为这些泡泡已经冒到水面上了</span></div><div class="line">    <span class="keyword">for</span>($k=<span class="number">0</span>; $k&lt;count($a)-$j; $k++) &#123;</div><div class="line">        <span class="comment">// 指引冒泡的方向</span></div><div class="line">        <span class="keyword">if</span> ($a[$k] &lt; $a[$k+<span class="number">1</span>]) &#123;</div><div class="line">            <span class="comment">// 负责前后数据交换（推动冒泡前行）</span></div><div class="line">            $tmp = $a[$k];</div><div class="line">            $a[$k] = $a[$k+<span class="number">1</span>];</div><div class="line">            $a[$k+<span class="number">1</span>] = $tmp;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>推动冒泡排序成立需要三个因素：</p>
+<ol>
+<li>冒泡的方向</li>
+<li>冒泡的次数</li>
+<li>冒泡的空气推力</li>
+</ol>
+<p>如果想理解php代码中关于冒泡排序的具体过程，可以把复杂程序拆分简单化，复杂的问题往往是由各种简单小问题累计起来的，只要适当的拆分，逐一击破，就能大胜也！</p>
+<ol>
+<li>首先我们找一组数据中要冒的那个气泡（也就是找到该组数据中的最大或最小值）<br>我们看这段数组<code>$a = array(10,50,20,33,69,99,100,12,2,11)</code>，如果让你用站在常规思路去比较大小，我们可以一眼扫描完，在大脑中快速运算对比完后把<strong>2</strong>给揪出来，但是遇到数据少的情况下还好，如果数据多起来，有几万个数据的时候就不好办了，因为你的大脑可能一下子记不住那么多数据，数据一多可能会把你搞糊涂，不记得哪些对比过，哪些还没对比过，这时候你想了个个比较笨的万无一失的方法，你把第一个数给揪出来，先假设它就是整个数据中最小的值10（只是假设），为了尽量少的看后面那一大串的数据，你只和紧挨着它的后一位置的数据进行对比（通过对比，你发现10比50小，运气不错），然后你再把10和接下来的那个值20对比，和33对比….</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">$a = <span class="keyword">array</span>(<span class="number">10</span>,<span class="number">50</span>,<span class="number">20</span>,<span class="number">33</span>,<span class="number">69</span>,<span class="number">99</span>,<span class="number">100</span>,<span class="number">12</span>,<span class="number">2</span>,<span class="number">11</span>);</div><div class="line"></div><div class="line"><span class="comment">// 这里我们找数组中最小的那个气泡</span></div><div class="line"><span class="keyword">for</span>($i = <span class="number">0</span>; $i &lt; count($a); $i++) &#123;</div><div class="line">	<span class="comment">// 假设数组中最小的那个值就在第一个（索引值为0），我们往从0索引开始逐个向后比较大小</span></div><div class="line">	$low = $a[<span class="number">0</span>];</div><div class="line">	<span class="keyword">if</span>($low &gt; $a[$i]) &#123;</div><div class="line">		$low = $a[$i];		</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这种比较最小值的方法（算是最通用的找最小值的方法），但是如果考虑一些特殊情况，如果你再比较这么多数据的时候，突然分神了，你忘记比较到哪个数据了（擦，刚才比较的是140，还是141来着），这时候你不得不崩溃的从头开始比较（当然在计算机中，一般不会发生这种不靠谱的事情，但也有可能发生意外），于是你想了一个更笨的办法，你和它后面的那个数据比较，如果比它小，就交换下，比它大就不交换，当然这么笨的举动如果让计算机去做，可能也就没什么了吧。<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>($k=<span class="number">0</span>; $k&lt;count($a); $k++) &#123;</div><div class="line">    <span class="comment">// 指引冒泡的方向</span></div><div class="line">    <span class="keyword">if</span> ($a[$k] &lt; $a[$k+<span class="number">1</span>]) &#123;</div><div class="line">        <span class="comment">// 负责前后数据交换（推动冒泡前行）</span></div><div class="line">        $tmp = $a[$k];</div><div class="line">        $a[$k] = $a[$k+<span class="number">1</span>];</div><div class="line">        $a[$k+<span class="number">1</span>] = $tmp;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>冒泡排序的具体演示：</p>
+<p><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/147273713677.gif" alt=""></p>
+<p>可以看到那些个特殊的数据就像个可爱的小气泡自觉的冒到了它该去的顶层位置。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/悟学/" rel="tag">#悟学</a>
+          
+            <a href="/tags/算法/" rel="tag">#算法</a>
+          
+            <a href="/tags/冒泡排序/" rel="tag">#冒泡排序</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/18/谈谈我对php匿名函数与闭包概念的理解/" rel="next" title="谈谈我对php匿名函数与闭包概念的理解">
+                <i class="fa fa-chevron-left"></i> 谈谈我对php匿名函数与闭包概念的理解
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/03/快速排序算法学习/" rel="prev" title="快速排序算法学习">
+                快速排序算法学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/09/01/冒泡排序算法学习/"
+           data-title="冒泡排序算法学习" data-url="https://hanxiansen.github.io/2016/09/01/冒泡排序算法学习/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ww1.sinaimg.cn/large/0060lm7Tgw1f61gmswsmsj30ek0dr0uc.jpg"
+               alt="金明决" />
+          <p class="site-author-name" itemprop="name">金明决</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hanxiansen" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2437617654" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/hu-huo-52" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">金明决</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hanxiansen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

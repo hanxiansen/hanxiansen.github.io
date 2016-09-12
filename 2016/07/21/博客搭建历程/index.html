@@ -1,0 +1,700 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="博客,hexo," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="寒山实验室" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="一、一点碎碎念以前在QQ空间的时代，我会偶尔写写日志什么的，但后来用说说、微博、朋友圈产品多了后，就很少写大篇幅的文字了，主要是变懒了，懒得敲那么多文字，这是我搭建这个博客自己写的第一篇文章，感觉有点像自言自语的碎碎念哈，嘿嘿。学编程这么久了，一直想自己开一个博客，最开始是在sina博客上面搞的，那是大二那会儿，当时迷恋做ps和ae后期这些（主要是因为要给社团做宣传视频，相信经历过这些的童鞋应该会">
+<meta property="og:type" content="article">
+<meta property="og:title" content="博客搭建历程">
+<meta property="og:url" content="https://hanxiansen.github.io/2016/07/21/博客搭建历程/index.html">
+<meta property="og:site_name" content="寒山实验室">
+<meta property="og:description" content="一、一点碎碎念以前在QQ空间的时代，我会偶尔写写日志什么的，但后来用说说、微博、朋友圈产品多了后，就很少写大篇幅的文字了，主要是变懒了，懒得敲那么多文字，这是我搭建这个博客自己写的第一篇文章，感觉有点像自言自语的碎碎念哈，嘿嘿。学编程这么久了，一直想自己开一个博客，最开始是在sina博客上面搞的，那是大二那会儿，当时迷恋做ps和ae后期这些（主要是因为要给社团做宣传视频，相信经历过这些的童鞋应该会">
+<meta property="og:updated_time" content="2016-07-21T07:54:18.723Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="博客搭建历程">
+<meta name="twitter:description" content="一、一点碎碎念以前在QQ空间的时代，我会偶尔写写日志什么的，但后来用说说、微博、朋友圈产品多了后，就很少写大篇幅的文字了，主要是变懒了，懒得敲那么多文字，这是我搭建这个博客自己写的第一篇文章，感觉有点像自言自语的碎碎念哈，嘿嘿。学编程这么久了，一直想自己开一个博客，最开始是在sina博客上面搞的，那是大二那会儿，当时迷恋做ps和ae后期这些（主要是因为要给社团做宣传视频，相信经历过这些的童鞋应该会">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '寒山'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="https://hanxiansen.github.io/2016/07/21/博客搭建历程/"/>
+
+  <title> 博客搭建历程 | 寒山实验室 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">寒山实验室</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                博客搭建历程
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-21T13:08:56+08:00" content="2016-07-21">
+              2016-07-21
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/21/博客搭建历程/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/21/博客搭建历程/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="一、一点碎碎念"><a href="#一、一点碎碎念" class="headerlink" title="一、一点碎碎念"></a>一、一点碎碎念</h2><p>以前在QQ空间的时代，我会偶尔写写日志什么的，但后来用说说、微博、朋友圈产品多了后，就很少写大篇幅的文字了，主要是变懒了，懒得敲那么多文字，这是我搭建这个博客自己写的第一篇文章，感觉有点像自言自语的碎碎念哈，嘿嘿。学编程这么久了，一直想自己开一个博客，最开始是在sina博客上面搞的，那是大二那会儿，当时迷恋做ps和ae后期这些（主要是因为要给社团做宣传视频，相信经历过这些的童鞋应该会有些感触吧），当时因为做这些玩意，所以就在sina上面搭建了一个博客，转载一些有用的教程，记得比较清楚的一个博客是一个叫“醉清风”的博客，当时转载了他好多文章，还在上面下载了他好多视频教程，那算是我最开始认识的博客了，后来捣鼓着自己买了个虚拟主机，开始用discuz做论坛，disucz学起来真心还是蛮简单的（搭建、安装入门很简单，但是二次开发就非当时之我所能搞定的了），当时做了一个叫<a href="http://www.soucangjie.com" title="搜藏界论坛" target="_blank" rel="external">搜藏界</a>的论坛，在上面传播一些电影、电视剧、纪录片资源，然后在sina上面又搞了一个搜藏界的博客，做seo的导向，陆陆续续在网易和百度上面都做过一些博客，但后来没能坚持下来，香港的虚拟主机很坑是一方面，自己因为各种学校的事情忙碌也是一个原因。自己经常在网上搜索资料，很多报错和相关学习资料都可以在大量的博客中找到，这其中csdn和博客园占了大部分，所以后来就在csdn上开了一个博客<a href="http://blog.csdn.net/a386611016" title="掘玉匠" target="_blank" rel="external">掘玉匠</a>，不过实在懒得写文字，就写了几篇项目中遇到的一些小问题及解决思路，前段时间去一家公司面试，遇到一个同学校的学长，一番交流，颇有收获，末了，问我有没有个人博客，我说没有，只有在有道云笔记上面做一些比较，他劝我还是要有个个人博客，平常发表一些文字，写文章不光是记录技术成长道路，还有敦促自己写好文章的推动力（因为有看官），当时颇有感触，回到家就开始捣鼓自己的个人博客，其实早些时候（2015）的时候，我就用ThinkPHP写过一个博客的小项目，但是那个啥，写得太烂了，所以不好意思放到线上去。所以现在要写个博客只好自己找找了，早前的时候，我就看到有很多技术文章介绍过hexo，而且看到很多以github.io作为一级域名的博客，当时就知道有很多程序猿在用，但当时只是简单的收藏关注了一写，以为要懂node.js技术才行，所以没有细究，直到前几日看了几篇技术文章，才发现原来真的很简单。所以捣鼓了一天，搞定上线（给自己一点掌声，嘿嘿嘿）。</p>
+<h2 id="二、初期准备"><a href="#二、初期准备" class="headerlink" title="二、初期准备"></a>二、初期准备</h2><ol>
+<li>node.js安装及环境变量配置</li>
+<li>git安装及环境变量配置</li>
+</ol>
+<h2 id="三、正式安装"><a href="#三、正式安装" class="headerlink" title="三、正式安装"></a>三、正式安装</h2><p>我这里参考的是一篇写好的hexo安装教程：<a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a>，具体的安装过程，我就不赘述了，这里我只是说一下，我在安装过程中遇到的问题及错误：</p>
+<h3 id="1、报RROR-Deployer-not-found-github错误"><a href="#1、报RROR-Deployer-not-found-github错误" class="headerlink" title="1、报RROR Deployer not found : github错误"></a>1、报RROR Deployer not found : github错误</h3><p>出现这种错误有几种原因：</p>
+<h5 id="在hexo3-0版本中要用git代替github，查看版本是用hexo-version命令"><a href="#在hexo3-0版本中要用git代替github，查看版本是用hexo-version命令" class="headerlink" title="在hexo3.0版本中要用git代替github，查看版本是用hexo -version命令"></a>在hexo3.0版本中要用git代替github，查看版本是用hexo -version命令</h5><h5 id="运行以下命令："><a href="#运行以下命令：" class="headerlink" title="运行以下命令："></a>运行以下命令：</h5><ol>
+<li><code>$ npm install hexo-deployer-git --save</code></li>
+<li><code>$ hexo g</code></li>
+<li><code>hexo d</code></li>
+</ol>
+<h3 id="2、报fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument错误"><a href="#2、报fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument错误" class="headerlink" title="2、报fatal: could not read Username for ‘https://github.com‘: Invalid argument错误"></a>2、报fatal: could not read Username for ‘<a href="https://github.com" target="_blank" rel="external">https://github.com</a>‘: Invalid argument错误</h3><p>一般出现这个错误就是因为git没有真正的配置好，具体的git配置可以上网搜索，检查配置正确的重要方法就是把add、commit、push整个流程都走一遍，直到在github上能看到提交的代码，就说明git配置好了</p>
+<h3 id="3、hexo-fatal-Not-a-git-repository-or-any-of-the-parent-directories"><a href="#3、hexo-fatal-Not-a-git-repository-or-any-of-the-parent-directories" class="headerlink" title="3、hexo fatal: Not a git repository (or any of the parent directories)"></a>3、hexo fatal: Not a git repository (or any of the parent directories)</h3><p>出现这个错误就是无法正常的提交库，可以检查提交的库地址是否有错，如果没错可以再安装一下支持git类型的插件<br><code>npm install hexo-deployer-git --save</code><br>然后<br><code>hexo g</code><br><code>hexo d</code>试一下，如果还是不行，我建议可以删除目录后按照教程再走一遍</p>
+<h3 id="4、当在windows上面的cmd上面提交出现错误时"><a href="#4、当在windows上面的cmd上面提交出现错误时" class="headerlink" title="4、当在windows上面的cmd上面提交出现错误时"></a>4、当在windows上面的cmd上面提交出现错误时</h3><p>我当时给deploy选项设置时是用的<strong>https</strong>形式的仓库，所以在提交代码上理所当然的会要求输入用户名和密码才能提交，但是大家都知道的，cmd面板上面是无法调出输入用户名和密码的小框框的，所以换到git cmd上面就可以了，后来我把仓库地址换成git开头和结尾的就没有问题了</p>
+<h2 id="四、一点总结"><a href="#四、一点总结" class="headerlink" title="四、一点总结"></a>四、一点总结</h2><h3 id="1、其实hexo博客的就是一个git仓库的正常管理"><a href="#1、其实hexo博客的就是一个git仓库的正常管理" class="headerlink" title="1、其实hexo博客的就是一个git仓库的正常管理"></a>1、其实hexo博客的就是一个git仓库的正常管理</h3><p>我对hexo真正的运行原理不是很懂，但就我使用的感觉来说，hexo就是一个托管在github上面的仓库，文章以markdown的形式存储在github仓库中，所以hexo 的deploy就是一个git push的过程，但是因为hexo的特殊处理，能够将内容区分后进行push</p>
+<h3 id="2、出了问题不用怕，上goole，究细节，看错误提示"><a href="#2、出了问题不用怕，上goole，究细节，看错误提示" class="headerlink" title="2、出了问题不用怕，上goole，究细节，看错误提示"></a>2、出了问题不用怕，上goole，究细节，看错误提示</h3><p>在安装的过程中遇到很多的问题，一个个的上网搜答案，很多问题都出在一些不经意之间的细节中，要学会像侦探一样，探寻每个不同寻常的背后隐藏的故事</p>
+<p>ok，先写到这儿吧，以后有什么，再跟进。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/博客/" rel="tag">#博客</a>
+          
+            <a href="/tags/hexo/" rel="tag">#hexo</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/07/20/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/" rel="prev" title="关于在laravel中进行数据migrate操作时报错的解决方案">
+                关于在laravel中进行数据migrate操作时报错的解决方案 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/07/21/博客搭建历程/"
+           data-title="博客搭建历程" data-url="https://hanxiansen.github.io/2016/07/21/博客搭建历程/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="http://ww1.sinaimg.cn/large/0060lm7Tgw1f61gmswsmsj30ek0dr0uc.jpg"
+               alt="金明决" />
+          <p class="site-author-name" itemprop="name">金明决</p>
+          <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/hanxiansen" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/your-user-name" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/u/2437617654" target="_blank" title="微博">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  微博
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/hu-huo-52" target="_blank" title="知乎">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  知乎
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、一点碎碎念"><span class="nav-number">1.</span> <span class="nav-text">一、一点碎碎念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、初期准备"><span class="nav-number">2.</span> <span class="nav-text">二、初期准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、正式安装"><span class="nav-number">3.</span> <span class="nav-text">三、正式安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、报RROR-Deployer-not-found-github错误"><span class="nav-number">3.1.</span> <span class="nav-text">1、报RROR Deployer not found : github错误</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#在hexo3-0版本中要用git代替github，查看版本是用hexo-version命令"><span class="nav-number">3.1.0.1.</span> <span class="nav-text">在hexo3.0版本中要用git代替github，查看版本是用hexo -version命令</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行以下命令："><span class="nav-number">3.1.0.2.</span> <span class="nav-text">运行以下命令：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、报fatal-could-not-read-Username-for-‘https-github-com‘-Invalid-argument错误"><span class="nav-number">3.2.</span> <span class="nav-text">2、报fatal: could not read Username for ‘https://github.com‘: Invalid argument错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、hexo-fatal-Not-a-git-repository-or-any-of-the-parent-directories"><span class="nav-number">3.3.</span> <span class="nav-text">3、hexo fatal: Not a git repository (or any of the parent directories)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4、当在windows上面的cmd上面提交出现错误时"><span class="nav-number">3.4.</span> <span class="nav-text">4、当在windows上面的cmd上面提交出现错误时</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、一点总结"><span class="nav-number">4.</span> <span class="nav-text">四、一点总结</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、其实hexo博客的就是一个git仓库的正常管理"><span class="nav-number">4.1.</span> <span class="nav-text">1、其实hexo博客的就是一个git仓库的正常管理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、出了问题不用怕，上goole，究细节，看错误提示"><span class="nav-number">4.2.</span> <span class="nav-text">2、出了问题不用怕，上goole，究细节，看错误提示</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">金明决</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"hanxiansen"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
