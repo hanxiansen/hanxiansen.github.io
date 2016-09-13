@@ -247,6 +247,136 @@
             
               
                 
+                <a class="post-title-link" href="/2016/09/13/使用redis、memchache实现PHP中的sessions共享/" itemprop="url">
+                  使用redis、memchache实现PHP中的sessions共享
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-13T16:21:04+08:00" content="2016-09-13">
+              2016-09-13
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/13/使用redis、memchache实现PHP中的sessions共享/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/13/使用redis、memchache实现PHP中的sessions共享/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>默认情况下，PHP将session存放到当前服务器/tmp目录下，一个session一个文件，全部以sess_前缀开始。随着session文件的增加出现性能问题，并且不利于项目的扩展：session不共享，导致session丢失。</p>
+<p>为了解决这个问题，我们可以将session统一存放到redis、memchache这些nosql中。</p>
+<p>安装redis、memchache</p>
+<p>TTLSA已经有相关文章，请前往《 redis安装配置 – ttlsa教程系列之redis 》、《memcached使用详解》</p>
+<p>安装php扩展</p>
+<p>最简单的方法，使用pecl，或者自行下载源码安装。</p>
+<p>安装redis扩展<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># pecl install redis</div><div class="line"># pecl install redis</div></pre></td></tr></table></figure></p>
+<p>安装memchache扩展<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># pecl install memchache</span></div><div class="line"><span class="meta"># pecl install memchache</span></div></pre></td></tr></table></figure></p>
+<p>配置PHP session<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:12100"</span></div><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:12100"</span></div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379"</span></div><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379"</span></div></pre></td></tr></table></figure></p>
+<p>多个redis/memchache<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379,tcp://s01.nosql.ttlsa.com:6380"</span></div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379,tcp://s01.nosql.ttlsa.com:6380"</span></div></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/12/JavaScript中in运算符的用处/" itemprop="url">
                   JavaScript中in运算符的用处
                 </a>
@@ -1349,131 +1479,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/" itemprop="url">
-                  关于在laravel中进行数据migrate操作时报错的解决方案
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-25T15:40:32+08:00" content="2016-07-25">
-              2016-07-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/25/关于在laravel中进行数据migrate操作时报错的解决方案/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>今天在学习laravel时，在进行<code>php artisan migrate</code>操作时报了一个错误<code>[PDOException]
-SQLSTATE[42000]: Syntax error or access violation: 1067 Invalid default val
-ue for &#39;created_at&#39;</code></p>
-<p><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/146943049456.png" alt=""></p>
-<p>百思不得其解，上网搜索，在github上找到了解决方案</p>
-<p>解决方案就是找到config/database.php 文件，把<code>mysql</code>的配置项<code>strict</code>修改为<code>true</code>就可以了。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1519,7 +1524,7 @@ ue for &#39;created_at&#39;</code></p>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">12</span>
+              <span class="site-state-item-count">13</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1527,7 +1532,7 @@ ue for &#39;created_at&#39;</code></p>
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">2</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1536,7 +1541,7 @@ ue for &#39;created_at&#39;</code></p>
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">25</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

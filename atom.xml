@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hanxiansen.github.io/"/>
-  <updated>2016-09-12T12:55:28.063Z</updated>
+  <updated>2016-09-13T08:29:52.244Z</updated>
   <id>https://hanxiansen.github.io/</id>
   
   <author>
@@ -14,6 +14,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用redis、memchache实现PHP中的sessions共享</title>
+    <link href="https://hanxiansen.github.io/2016/09/13/%E4%BD%BF%E7%94%A8redis%E3%80%81memchache%E5%AE%9E%E7%8E%B0PHP%E4%B8%AD%E7%9A%84sessions%E5%85%B1%E4%BA%AB/"/>
+    <id>https://hanxiansen.github.io/2016/09/13/使用redis、memchache实现PHP中的sessions共享/</id>
+    <published>2016-09-13T08:21:04.000Z</published>
+    <updated>2016-09-13T08:29:52.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>默认情况下，PHP将session存放到当前服务器/tmp目录下，一个session一个文件，全部以sess_前缀开始。随着session文件的增加出现性能问题，并且不利于项目的扩展：session不共享，导致session丢失。</p>
+<p>为了解决这个问题，我们可以将session统一存放到redis、memchache这些nosql中。</p>
+<p>安装redis、memchache</p>
+<p>TTLSA已经有相关文章，请前往《 redis安装配置 – ttlsa教程系列之redis 》、《memcached使用详解》</p>
+<p>安装php扩展</p>
+<p>最简单的方法，使用pecl，或者自行下载源码安装。</p>
+<p>安装redis扩展<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># pecl install redis</div><div class="line"># pecl install redis</div></pre></td></tr></table></figure></p>
+<p>安装memchache扩展<br><figure class="highlight vala"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta"># pecl install memchache</span></div><div class="line"><span class="meta"># pecl install memchache</span></div></pre></td></tr></table></figure></p>
+<p>配置PHP session<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:12100"</span></div><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:12100"</span></div></pre></td></tr></table></figure></p>
+<p>或者<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379"</span></div><div class="line">session<span class="selector-class">.save_handler</span> = redis</div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379"</span></div></pre></td></tr></table></figure></p>
+<p>多个redis/memchache<br><figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379,tcp://s01.nosql.ttlsa.com:6380"</span></div><div class="line">session<span class="selector-class">.save_path</span> = <span class="string">"tcp://127.0.0.1:6379,tcp://s01.nosql.ttlsa.com:6380"</span></div></pre></td></tr></table></figure></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;默认情况下，PHP将session存放到当前服务器/tmp目录下，一个session一个文件，全部以sess_前缀开始。随着session文件的增加出现性能问题，并且不利于项目的扩展：session不共享，导致session丢失。&lt;/p&gt;
+&lt;p&gt;为了解决这个问题，我们可以将
+    
+    </summary>
+    
+      <category term="编程" scheme="https://hanxiansen.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+      <category term="php" scheme="https://hanxiansen.github.io/tags/php/"/>
+    
+      <category term="session" scheme="https://hanxiansen.github.io/tags/session/"/>
+    
+      <category term="redis" scheme="https://hanxiansen.github.io/tags/redis/"/>
+    
+      <category term="memcache" scheme="https://hanxiansen.github.io/tags/memcache/"/>
+    
+  </entry>
   
   <entry>
     <title>JavaScript中in运算符的用处</title>
