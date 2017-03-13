@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://hanxiansen.github.io/"/>
-  <updated>2016-09-13T08:29:52.244Z</updated>
+  <updated>2017-03-07T14:47:40.405Z</updated>
   <id>https://hanxiansen.github.io/</id>
   
   <author>
@@ -14,6 +14,110 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>&#39;python错误汇总&#39;</title>
+    <link href="https://hanxiansen.github.io/2017/03/07/python%E9%94%99%E8%AF%AF%E6%B1%87%E6%80%BB/"/>
+    <id>https://hanxiansen.github.io/2017/03/07/python错误汇总/</id>
+    <published>2017-03-07T14:47:40.000Z</published>
+    <updated>2017-03-07T14:47:40.405Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>laravel中的自定义函数的放置规范</title>
+    <link href="https://hanxiansen.github.io/2016/09/20/laravel%E4%B8%AD%E7%9A%84%E8%87%AA%E5%AE%9A%E4%B9%89%E5%87%BD%E6%95%B0%E7%9A%84%E6%94%BE%E7%BD%AE%E8%A7%84%E8%8C%83/"/>
+    <id>https://hanxiansen.github.io/2016/09/20/laravel中的自定义函数的放置规范/</id>
+    <published>2016-09-20T14:53:16.000Z</published>
+    <updated>2016-09-20T15:02:56.403Z</updated>
+    
+    <content type="html"><![CDATA[<p>转载自：<a href="https://www.phpxy.com/article/37.html" target="_blank" rel="external">https://www.phpxy.com/article/37.html</a></p>
+<p>laravel里面我们很多朋友不知道把自定义函数放在哪儿。我们的应用里经常会有一些全局都可能会用的函数，我们应该怎么放置它会比较好呢？现在匀们为大家准备了laravel放置函数的规范。</p>
+<ol>
+<li>创建文件 app/helpers.php</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 示例函数function foo()</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"foo"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>修改项目 composer.json</li>
+</ol>
+<p>在项目 composer.json 中 autoload 部分里的 files 字段加入该文件即可：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    ...</div><div class="line"> </div><div class="line">    "autoload": &#123;</div><div class="line">        "files": [</div><div class="line">            "app/helpers.php"</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后运行:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer dump-autoload</div></pre></td></tr></table></figure></p>
+<p>OK，然后你就可以在任何地方用到 app/helpers.php 中的函数了。</p>
+<p>关于<strong> files </strong> 变量：如果你想要明确的指定，在每次请求时都要载入某些文件，那么你可以使用 ‘files’ autoloading。通常作为函数库的载入方式（而非类库）。<br>可以参考这篇文章：<a href="http://docs.phpcomposer.com/04-schema.html#Files" target="_blank" rel="external">http://docs.phpcomposer.com/04-schema.html#Files</a>。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;转载自：&lt;a href=&quot;https://www.phpxy.com/article/37.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://www.phpxy.com/article/37.html&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;larav
+    
+    </summary>
+    
+      <category term="blog" scheme="https://hanxiansen.github.io/categories/blog/"/>
+    
+    
+      <category term="php" scheme="https://hanxiansen.github.io/tags/php/"/>
+    
+      <category term="laravel" scheme="https://hanxiansen.github.io/tags/laravel/"/>
+    
+      <category term="函数" scheme="https://hanxiansen.github.io/tags/%E5%87%BD%E6%95%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于面向对象中依赖注入概念的研究与理解</title>
+    <link href="https://hanxiansen.github.io/2016/09/16/%E5%85%B3%E4%BA%8E%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E4%B8%AD%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%E6%A6%82%E5%BF%B5%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E7%90%86%E8%A7%A3/"/>
+    <id>https://hanxiansen.github.io/2016/09/16/关于面向对象中依赖注入概念的研究与理解/</id>
+    <published>2016-09-16T09:44:46.000Z</published>
+    <updated>2016-09-16T14:23:09.475Z</updated>
+    
+    <content type="html"><![CDATA[<p>前言：近来在研究面向对象相关概念，这其中注意到依赖注入这个概念，以前虽也有看到过此种方案，但是没能真正理解，这次上网查了一些资料，一番消化理解后在此总结一番，以飨众位看客，<strong>希望起到抛砖引玉之用，同时也欢迎各位对此文中不足之处批评指正，不胜感激也</strong>。</p>
+<p>提醒：本文中的相关概念基于<strong>PHP</strong>编程语言</p>
+<p>分析法：为了方便总结依赖注入这个概念，我采用<strong>w(why)、w(what)、h(how)</strong>三点进行细分与解读。</p>
+<h2 id="1、W（why）为什么要用依赖注入？"><a href="#1、W（why）为什么要用依赖注入？" class="headerlink" title="1、W（why）为什么要用依赖注入？"></a>1、W（why）为什么要用依赖注入？</h2><p>一些碎碎念：当我们调查一个事物产生的原因时会分析这件事物产生的<strong>事件背景</strong>。比如当我们调查一件杀人案件中的疑犯时会分析这个疑犯是否曾有刑事犯罪史，是否曾和被杀者有过过节等。所以知道事物的过去史，会更好帮助我们分析当前的问题，因为事物的产生不是空穴来风，它往往是在过去某些事物的推动下形成的。<br>我们知道依赖注入是面向对象中的重要手法，在面向对象中如果想要在一个类中调用另一个类的功能，我们会先定义好两个类，在调用类（主动调用方）的构造函数中或某个方法中实例化被调用类（被动调用方），这里我举程序员类和编辑器类的例子来说明：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Coder</span> </span></div><div class="line"><span class="title">class</span> <span class="title">NotePad</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $language;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">'文本编辑器'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Coder</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $editor;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;editor = <span class="keyword">new</span> NotePad();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">codeWrite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'我用'</span>.<span class="keyword">$this</span>-&gt;editor-&gt;getName().<span class="string">'写代码'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$coder01 = <span class="keyword">new</span> Coder();</div><div class="line">$coder01-&gt;codeWrite();</div></pre></td></tr></table></figure></p>
+<p>我们看到，在这个关于程序员用编辑器的过程中，就产生了较强的依赖，我们每次要写代码时都要先实例化一个固定好的编辑器，但如果有一天我觉得这个‘notepad’编辑器不好用了，我像用‘sublimeText’或‘atom’等，这时候我们不得不修改‘coder’这个类，修改编辑器的实例化对象为<code>$this-&gt;editor = new Atom()</code>,这就是强依赖带来的高耦合后果（耦合：藕断丝连，想象那个剪不断，理还乱的狗血画面，就能懂耦合的不爽之处了）。这时，关于‘依赖  注入’的设计思路就提了出来。</p>
+<h2 id="1、W（what）什么是依赖注入？"><a href="#1、W（what）什么是依赖注入？" class="headerlink" title="1、W（what）什么是依赖注入？"></a>1、W（what）什么是依赖注入？</h2><ul>
+<li>维基百科解释：</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;前言：近来在研究面向对象相关概念，这其中注意到依赖注入这个概念，以前虽也有看到过此种方案，但是没能真正理解，这次上网查了一些资料，一番消化理解后在此总结一番，以飨众位看客，&lt;strong&gt;希望起到抛砖引玉之用，同时也欢迎各位对此文中不足之处批评指正，不胜感激也&lt;/stron
+    
+    </summary>
+    
+      <category term="program" scheme="https://hanxiansen.github.io/categories/program/"/>
+    
+    
+      <category term="悟学" scheme="https://hanxiansen.github.io/tags/%E6%82%9F%E5%AD%A6/"/>
+    
+      <category term="php" scheme="https://hanxiansen.github.io/tags/php/"/>
+    
+      <category term="面向对象" scheme="https://hanxiansen.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/"/>
+    
+      <category term="依赖注入" scheme="https://hanxiansen.github.io/tags/%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>关于laravel中服务提供、容器等概念的研究与理解</title>
+    <link href="https://hanxiansen.github.io/2016/09/16/%E5%85%B3%E4%BA%8Elaravel%E4%B8%AD%E6%9C%8D%E5%8A%A1%E6%8F%90%E4%BE%9B%E3%80%81%E5%AE%B9%E5%99%A8%E7%AD%89%E6%A6%82%E5%BF%B5%E7%9A%84%E7%A0%94%E7%A9%B6%E4%B8%8E%E7%90%86%E8%A7%A3/"/>
+    <id>https://hanxiansen.github.io/2016/09/16/关于laravel中服务提供、容器等概念的研究与理解/</id>
+    <published>2016-09-16T09:43:29.000Z</published>
+    <updated>2016-09-16T09:43:29.844Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>使用redis、memchache实现PHP中的sessions共享</title>

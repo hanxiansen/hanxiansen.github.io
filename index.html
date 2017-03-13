@@ -247,6 +247,465 @@
             
               
                 
+                <a class="post-title-link" href="/2017/03/07/python错误汇总/" itemprop="url">
+                  'python错误汇总'
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-07T22:47:40+08:00" content="2017-03-07">
+              2017-03-07
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2017/03/07/python错误汇总/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2017/03/07/python错误汇总/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/20/laravel中的自定义函数的放置规范/" itemprop="url">
+                  laravel中的自定义函数的放置规范
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-20T22:53:16+08:00" content="2016-09-20">
+              2016-09-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/blog/" itemprop="url" rel="index">
+                    <span itemprop="name">blog</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/20/laravel中的自定义函数的放置规范/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/20/laravel中的自定义函数的放置规范/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>转载自：<a href="https://www.phpxy.com/article/37.html" target="_blank" rel="external">https://www.phpxy.com/article/37.html</a></p>
+<p>laravel里面我们很多朋友不知道把自定义函数放在哪儿。我们的应用里经常会有一些全局都可能会用的函数，我们应该怎么放置它会比较好呢？现在匀们为大家准备了laravel放置函数的规范。</p>
+<ol>
+<li>创建文件 app/helpers.php</li>
+</ol>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 示例函数function foo()</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">return</span> <span class="string">"foo"</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<ol>
+<li>修改项目 composer.json</li>
+</ol>
+<p>在项目 composer.json 中 autoload 部分里的 files 字段加入该文件即可：<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    ...</div><div class="line"> </div><div class="line">    "autoload": &#123;</div><div class="line">        "files": [</div><div class="line">            "app/helpers.php"</div><div class="line">        ]</div><div class="line">    &#125;</div><div class="line">    ...</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>然后运行:<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">composer dump-autoload</div></pre></td></tr></table></figure></p>
+<p>OK，然后你就可以在任何地方用到 app/helpers.php 中的函数了。</p>
+<p>关于<strong> files </strong> 变量：如果你想要明确的指定，在每次请求时都要载入某些文件，那么你可以使用 ‘files’ autoloading。通常作为函数库的载入方式（而非类库）。<br>可以参考这篇文章：<a href="http://docs.phpcomposer.com/04-schema.html#Files" target="_blank" rel="external">http://docs.phpcomposer.com/04-schema.html#Files</a>。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/16/关于面向对象中依赖注入概念的研究与理解/" itemprop="url">
+                  关于面向对象中依赖注入概念的研究与理解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-16T17:44:46+08:00" content="2016-09-16">
+              2016-09-16
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/program/" itemprop="url" rel="index">
+                    <span itemprop="name">program</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/16/关于面向对象中依赖注入概念的研究与理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/16/关于面向对象中依赖注入概念的研究与理解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>前言：近来在研究面向对象相关概念，这其中注意到依赖注入这个概念，以前虽也有看到过此种方案，但是没能真正理解，这次上网查了一些资料，一番消化理解后在此总结一番，以飨众位看客，<strong>希望起到抛砖引玉之用，同时也欢迎各位对此文中不足之处批评指正，不胜感激也</strong>。</p>
+<p>提醒：本文中的相关概念基于<strong>PHP</strong>编程语言</p>
+<p>分析法：为了方便总结依赖注入这个概念，我采用<strong>w(why)、w(what)、h(how)</strong>三点进行细分与解读。</p>
+<h2 id="1、W（why）为什么要用依赖注入？"><a href="#1、W（why）为什么要用依赖注入？" class="headerlink" title="1、W（why）为什么要用依赖注入？"></a>1、W（why）为什么要用依赖注入？</h2><p>一些碎碎念：当我们调查一个事物产生的原因时会分析这件事物产生的<strong>事件背景</strong>。比如当我们调查一件杀人案件中的疑犯时会分析这个疑犯是否曾有刑事犯罪史，是否曾和被杀者有过过节等。所以知道事物的过去史，会更好帮助我们分析当前的问题，因为事物的产生不是空穴来风，它往往是在过去某些事物的推动下形成的。<br>我们知道依赖注入是面向对象中的重要手法，在面向对象中如果想要在一个类中调用另一个类的功能，我们会先定义好两个类，在调用类（主动调用方）的构造函数中或某个方法中实例化被调用类（被动调用方），这里我举程序员类和编辑器类的例子来说明：<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Coder</span> </span></div><div class="line"><span class="title">class</span> <span class="title">NotePad</span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $language;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">getName</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="string">'文本编辑器'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Coder</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">private</span> $editor;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">$this</span>-&gt;editor = <span class="keyword">new</span> NotePad();</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">codeWrite</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="string">'我用'</span>.<span class="keyword">$this</span>-&gt;editor-&gt;getName().<span class="string">'写代码'</span>;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">$coder01 = <span class="keyword">new</span> Coder();</div><div class="line">$coder01-&gt;codeWrite();</div></pre></td></tr></table></figure></p>
+<p>我们看到，在这个关于程序员用编辑器的过程中，就产生了较强的依赖，我们每次要写代码时都要先实例化一个固定好的编辑器，但如果有一天我觉得这个‘notepad’编辑器不好用了，我像用‘sublimeText’或‘atom’等，这时候我们不得不修改‘coder’这个类，修改编辑器的实例化对象为<code>$this-&gt;editor = new Atom()</code>,这就是强依赖带来的高耦合后果（耦合：藕断丝连，想象那个剪不断，理还乱的狗血画面，就能懂耦合的不爽之处了）。这时，关于‘依赖  注入’的设计思路就提了出来。</p>
+<h2 id="1、W（what）什么是依赖注入？"><a href="#1、W（what）什么是依赖注入？" class="headerlink" title="1、W（what）什么是依赖注入？"></a>1、W（what）什么是依赖注入？</h2><ul>
+<li>维基百科解释：</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/16/关于laravel中服务提供、容器等概念的研究与理解/" itemprop="url">
+                  关于laravel中服务提供、容器等概念的研究与理解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-09-16T17:43:29+08:00" content="2016-09-16">
+              2016-09-16
+            </time>
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/16/关于laravel中服务提供、容器等概念的研究与理解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/09/16/关于laravel中服务提供、容器等概念的研究与理解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/09/13/使用redis、memchache实现PHP中的sessions共享/" itemprop="url">
                   使用redis、memchache实现PHP中的sessions共享
                 </a>
@@ -992,493 +1451,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/18/谈谈我对php匿名函数与闭包概念的理解/" itemprop="url">
-                  谈谈我对php匿名函数与闭包概念的理解
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-18T16:11:26+08:00" content="2016-08-18">
-              2016-08-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/18/谈谈我对php匿名函数与闭包概念的理解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/18/谈谈我对php匿名函数与闭包概念的理解/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="先说说闭包"><a href="#先说说闭包" class="headerlink" title="先说说闭包"></a>先说说闭包</h2><p>在javascript中，闭包是非常常用的概念，关于闭包比较好的解释是这样的<strong>“一个用来保持所处环境函数”</strong></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/08/18/php匿名函数use关键字学习/" itemprop="url">
-                  php匿名函数use关键字学习
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-08-18T15:38:28+08:00" content="2016-08-18">
-              2016-08-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/08/18/php匿名函数use关键字学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/08/18/php匿名函数use关键字学习/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>先上一个php官方文档关于这一知识点的链接：<a href="http://www.php.net/manual/zh/functions.anonymous.php" target="_blank" rel="external">http://www.php.net/manual/zh/functions.anonymous.php</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/28/关于laravel中双冒号class写法的学习/" itemprop="url">
-                  关于laravel中双冒号class写法的学习
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-28T17:44:58+08:00" content="2016-07-28">
-              2016-07-28
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/28/关于laravel中双冒号class写法的学习/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/28/关于laravel中双冒号class写法的学习/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在学习laravel模型工厂部分知识的时候遇到这种写法<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">App\User::class</div></pre></td></tr></table></figure></p>
-<p>觉得很奇怪的，起初还以为是laravel定义的一个方法，但是一看这名字，马上又否定了自己的愚蠢想法，这class是php的保留字，不可能是laravel自定义的类属性，上网搜了一下，找到了答案<a href="https://laracasts.com/discuss/channels/laravel/laravel-51-what-is-class?page=1" target="_blank" rel="external">https://laracasts.com/discuss/channels/laravel/laravel-51-what-is-class?page=1</a></p>
-<p>原来这个<code>::class</code>是专门用来获取包含<strong>命名空间+类名</strong>的，如果是光获取类名，可以用<code>__CLASS__</code>魔术常量，如果要获取当前的命名空间，可以用<code>__NAMESPACE__</code>，但在这里通过一个<code>::class</code>就可以优雅的获取了。如下所示<br><figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">namespace</span> <span class="title">test</span>\<span class="title">test01</span>;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__construct</span><span class="params">()</span></span></div><div class="line">    &#123;</div><div class="line">        <span class="keyword">echo</span> <span class="keyword">self</span>::class;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">new</span> Test();</div></pre></td></tr></table></figure></p>
-<p>这里的结果就是<code>test\test01\Test</code></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/07/26/关于laravel中的表单方法欺骗/" itemprop="url">
-                  关于laravel中的表单方法欺骗
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-07-26T10:24:24+08:00" content="2016-07-26">
-              2016-07-26
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/blog/" itemprop="url" rel="index">
-                    <span itemprop="name">blog</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/07/26/关于laravel中的表单方法欺骗/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/26/关于laravel中的表单方法欺骗/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>经常在laravel的blade模板中看到如下这样写法的代码，咋看不明所以，上网搜了一下，找到了答案。<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_method"</span> <span class="attr">value</span>=<span class="string">"PUT"</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>原来这是laravel中的表单欺骗（<strong>Form Method Spoofing</strong>），在laravel的文档中<a href="http://www.golaravel.com/laravel/docs/5.1/routing/#form-method-spoofing" target="_blank" rel="external">http://www.golaravel.com/laravel/docs/5.1/routing/#form-method-spoofing</a>是这样解释的：</p>
-<p>HTML 表单没有支持 <code>PUT</code>、<code>PATCH</code> 或 <code>DELETE</code> 动作。所以在从 HTML 表单中调用被定义的 <code>PUT</code>、<code>PATCH</code> 或 <code>DELETE</code> 路由时，你将需要在表单中增加隐藏的 <code>_method</code> 字段。跟随 <code>_method</code> 字段送出的值将被作为 HTTP 的请求方法使用：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"/foo/bar"</span> <span class="attr">method</span>=<span class="string">"POST"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_method"</span> <span class="attr">value</span>=<span class="string">"PUT"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">name</span>=<span class="string">"_token"</span> <span class="attr">value</span>=<span class="string">"&#123;&#123; csrf_token() &#125;&#125;"</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>至于为什么要这样做，是因为laravel路由要遵循<strong>RESTful架构</strong>（<a href="http://kb.cnblogs.com/page/512047/" target="_blank" rel="external">RESTful架构架构详解</a>）<br>(路由—&gt;控制器)Restful对照关系示例表：<br><img src="http://btznt.img48.wal8.com/img48/351201_20130616232947/14695027633.png" alt=""></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1524,7 +1496,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -1532,7 +1504,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1541,7 +1513,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-count">28</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -1623,7 +1595,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2017</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
